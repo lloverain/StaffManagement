@@ -2,6 +2,9 @@ package modular.entity;
 
 import org.springframework.stereotype.Repository;
 
+/**
+ * 员工实体
+ */
 @Repository
 public class Employee {
     /**

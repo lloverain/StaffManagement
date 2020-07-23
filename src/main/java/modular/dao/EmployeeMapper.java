@@ -11,4 +11,26 @@ public interface EmployeeMapper {
      * @return
      */
     List<Employee> listAll();
+
+    /**
+     * 添加用户
+     * @param employee
+     * @return
+     */
+    int addUser(Employee employee);
+
+    /**
+     * 更新用户
+     * @param employee
+     * @return
+     */
+    int updateUser(Employee employee);
+
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     */
+    int deleteUser(int id);
+
 }

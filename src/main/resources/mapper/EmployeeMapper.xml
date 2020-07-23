@@ -7,4 +7,16 @@
     <select id="listAll" resultType="modular.entity.Employee">
          select * from employee;
     </select>
+
+    <insert id="addUser">
+        insert into employee(name,age,sex,address) values (#{name},#{age},#{sex},#{address});
+    </insert>
+
+    <update id="updateUser">
+        update employee set name = #{name},age = #{age},sex=#{sex},address = #{address} where id = #{id};
+    </update>
+
+    <delete id="deleteUser">
+        delete from employee where id = #{id};
+    </delete>
 </mapper>
