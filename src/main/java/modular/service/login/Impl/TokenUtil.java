@@ -9,10 +9,7 @@ import java.util.Date;
 
 /**
  * 生成token
- * @PackageName:com.yangjiaying.hanfu.modular.system.service.Impl
- * @ClassName:getToken
- * @author:yangjiaying
- * @date 2019/11/25 22:36
+ * @author 杨佳颖
  */
 public class TokenUtil {
     public String getToken(User user) {
@@ -20,8 +17,9 @@ public class TokenUtil {
         Long now = System.currentTimeMillis();
         Long nexttime = now + SystemConfig.PRESCRIPTIONTIME;
         Date nextDate = new Date(nexttime);
-        System.out.println("nextDate:"+nextDate);
+        System.out.println("时间到期为:"+nextDate);
         String token = "";
+        //根据电话加密
         token = JWT.create()
                 .withAudience(user.getPhone())
                 .withExpiresAt(nextDate)

@@ -5,18 +5,14 @@ import modular.api.ResponseResult;
 import modular.entity.Employee;
 import modular.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 /**
+ * 员工的增删改查
  * @author 杨佳颖
  */
 @Controller
@@ -146,10 +142,10 @@ public class EmployeeController {
         ModelAndView mv = new ModelAndView();
         if (exception instanceof MethodArgumentTypeMismatchException) {
             mv.addObject("error", "参数不匹配:" + exception.getMessage());
-            mv.setViewName("error");
+            mv.setViewName("error.jsp");
         } else {
             mv.addObject("error", exception.getMessage());
-            mv.setViewName("error");
+            mv.setViewName("error.jsp");
         }
         return mv;
     }

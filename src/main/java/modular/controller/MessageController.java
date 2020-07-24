@@ -22,15 +22,22 @@ public class MessageController {
 
     private MessageSendApiService messageSendApiService = new MessageSendApiServiceImpl();
 
+    /**
+     * 发送验证码接口
+     * @param phone 电话
+     * @param session   存储服务器产生的验证码，用作验证
+     * @return
+     */
     @RequestMapping("/sendyzm/{phone}")
     @ResponseBody
     public ResponseResult sendVerificationCode(@PathVariable String phone, HttpSession session) {
         if (11 == phone.length()) {
             int mobile_code = (int) ((Math.random() * 9 + 1) * 100000);
-            session.setAttribute("code",mobile_code);
+            System.out.println("验证码：" + mobile_code);
+            session.setAttribute("code", mobile_code);
             try {
-                if (messageSendApiService.sendMessage(phone,mobile_code)) {
-                    session.setAttribute("code",mobile_code);
+                if (messageSendApiService.sendMessage(phone, mobile_code)) {
+                    session.setAttribute("code", mobile_code);
                     return Response.makeOKRsp("手机号为:" + phone + ",已发送！");
                 } else {
                     return Response.makeErrRsp("手机号为:" + phone + ",发送失败！");

@@ -1,0 +1,162 @@
+{
+  "info": {
+    "_postman_id": "6bdd23e5-7e55-4acb-9e63-44f3138a8708",
+    "name": "试岗",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "add",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/add/aaa/18/男/四川成都",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "add",
+            "aaa",
+            "18",
+            "男",
+            "四川成都"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "see",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/see",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "see"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/update/2/小王/20/男/四川成都",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "update",
+            "2",
+            "小王",
+            "20",
+            "男",
+            "四川成都"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/delete/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "delete",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "发送验证码",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/sendyzm/13684303475",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "sendyzm",
+            "13684303475"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "登录",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/login/13684303475/167859",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "login",
+            "13684303475",
+            "167859"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "访问主页",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMzY4NDMwMzQ3NSIsImV4cCI6MTU5NTU3NDg1Nn0.cK8QTx2XS48sANhoK4L80SZUObbPm1WLfRquraifWQ4",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/homepage",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "homepage"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

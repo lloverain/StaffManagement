@@ -12,9 +12,10 @@ public class ExceptionController {
 
     @ExceptionHandler
     public ModelAndView error(Exception exception) {
+        System.out.println(exception.getMessage());
         ModelAndView mv=new ModelAndView();
         mv.addObject("error", exception.getMessage());
-        mv.setViewName("error");
+        mv.setViewName("error.jsp");
         return mv;
     }
 }

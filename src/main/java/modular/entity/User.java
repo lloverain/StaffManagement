@@ -1,5 +1,8 @@
 package modular.entity;
 
+/**
+ * 用户类
+ */
 public class User {
     private int id;
     private String account;

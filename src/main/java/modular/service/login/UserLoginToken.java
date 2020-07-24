@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 用于登录后才能操作的token
+ * 用于登录后才能操作的token验证器
  * @author 杨佳颖
  */
 @Target({ElementType.METHOD, ElementType.TYPE})

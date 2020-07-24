@@ -1,7 +1,8 @@
 package modular.api;
 
 /**
- * 返回格式风格
+ * 返回格式
+ *
  * @author 杨佳颖
  */
 public class ResponseResult<T> {
