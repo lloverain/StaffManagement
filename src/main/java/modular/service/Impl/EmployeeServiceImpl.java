@@ -22,7 +22,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> listAll() {
-        System.out.println("11");
         return employeeMapper.listAll();
     }
 

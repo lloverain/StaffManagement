@@ -32,8 +32,7 @@ public class EmployeeController {
      */
     @RequestMapping(value = "/aaa", method = RequestMethod.GET)
     public String toIndex() {
-        System.out.println(employeeService.listAll());
-        return "index";
+        return "index.jsp";
     }
 
     /**

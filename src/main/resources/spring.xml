@@ -20,7 +20,7 @@
         <property name="dataSource" ref="dataSource"></property>
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>
-    <!--使用哪个dao包-->
+    <!--扫描MapperDao-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="modular.dao"></property>
     </bean>
